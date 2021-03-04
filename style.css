@@ -10,7 +10,7 @@
     --gray: #aaaaaa;
     --transition: .3s ease;
     --py: 100px 0;
-    --pt:100px 0 0 0;
+    --pt: 100px 0 0 0;
 }
 /***************
 basic styles
@@ -164,6 +164,7 @@ gallery
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .gallery .container div img {
     width: 100%;
@@ -191,23 +192,21 @@ gallery
 .gallery .buttons button:last-child {
     background: var(--headings);
 }
-/* Services */
+/***************
+services
+***************/
 .services {
     padding: var(--pt);
     padding-bottom: 20px;
-
 }
 .services article {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 100px;
-    
 }
 .services article .col {
-   
     display: flex;
-    
     flex: 0 0 47%;
     align-items: center;
     margin-bottom: 80px;
@@ -218,6 +217,10 @@ gallery
     border-radius: 50%;
     border: 8px solid #e3e3e3;
     display: block;
+}
+.services article img:hover {
+    border: 8px solid var(--accents);
+    transition: var(--transition);
 }
 .services article .col .text {
     flex: 0 0 66%;
@@ -232,19 +235,139 @@ gallery
     order: 1;
 }
 .services article .col:nth-child(odd) .text {
-   text-align: right;
+    text-align: right;
 }
-.services .text h3{
+.services .text h3 {
     text-transform: uppercase;
     font-size: 1.5rem;
 }
-.services .text h5{
+.services .text h5 {
     text-transform: uppercase;
     font-size: 1rem;
     color: var(--gray);
     font-weight: 300;
     padding-bottom: 20px;
 }
-.services .text p{
+.services .text p {
     font-size: 1.1rem;
+}
+/***************
+cta
+***************/
+.cta {
+    background-image:linear-gradient(rgba(72, 72, 72,.9), rgba(72, 72, 72,.9)),  url(img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: var(--py);
+    text-align: center;
+}
+.cta h2 {
+    color: var(--white);
+}
+.cta h4 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: var(--gray);
+    font-weight: 400;
+    padding: 30px 0;
+}
+/***************
+footer
+***************/
+footer {
+    padding: var(--py);
+    text-align: center;
+    background: #f6f6f6;
+}
+footer i {
+    font-size: 3rem;
+    color: var(--gray);
+    margin: 0 60px 0px 0;
+}
+footer i:hover {
+    color: var(--headings);
+    transition: var(--transition);
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+footer ul li {
+    border-right: 1px solid var(--gray);
+    color: var(--gray);
+    padding: 0 20px;
+}
+footer ul li:last-child {
+    border: none;
+}
+footer ul li a {
+    color: var(--gray);
+    text-decoration: none;
+}
+footer ul li a:hover {
+    color: var(--text);
+}
+/* Responsive */
+@media(max-width: 767px) {
+    header nav {
+        
+        padding: 20px 20px 0;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    header ul li a {
+        
+        margin-left: 20px;
+        font-size: 1rem;
+    }
+    header div p {
+        
+        font-size: 1.4rem;
+        
+    }
+    button {
+        padding: 15px 30px;  
+    }
+    .intro {
+        width: 90%;
+        flex-wrap: wrap; 
+    }
+    .intro article {
+        flex: 0 0 100%;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .intro h4,
+    .gallery h4,
+    .services h4 {
+        font-size: 1.5rem;
+}
+.container{
+    width: 90%;
+}
+.gallery .container div {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+}
+    .gallery .buttons button {
+     margin:0 10px 10px 0;
+     padding:10px 30px;
+
+    }
+    .services article .col {
+        flex: 0 0 100%;
+    }
+    footer i {
+        margin: 20px;
+    }
+    footer ul {
+        flex-direction: column;
+    }
+    footer ul li {
+        padding: 10px;
+    }
 }
