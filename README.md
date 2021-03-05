@@ -1,5 +1,5 @@
-#Spatial - Web Page
-##Coding Exercise
-###Technologies Used:
+# Spatial - Web Page
+## Coding Exercise
+### Technologies Used:
 *HTML
 *CSS
